@@ -28,11 +28,11 @@
 
 ### Extras
 
-[] Dicionário
-[] Configurações de leitura (fonte, tamanho, tema, etc)
-[] Adição de Giphys, Imagens e Vídeos 
-[] Falar sobre os benefícios da leitura
-[] Livros com a possibilidade de leitura por voz, para pessoas com baixa ou nenhuma visão
-[] Streaming dos e-books
-[] Batalhas com amigos 
-[] Perguntas e Respostas
+- [ ] Dicionário
+- [ ] Configurações de leitura (fonte, tamanho, tema, etc)
+- [ ] Adição de Giphys, Imagens e Vídeos 
+- [ ] Falar sobre os benefícios da leitura
+- [ ] Livros com a possibilidade de leitura por voz, para pessoas com baixa ou nenhuma visão
+- [ ] Streaming dos e-books
+- [ ] Batalhas com amigos 
+- [ ] Perguntas e Respostas
