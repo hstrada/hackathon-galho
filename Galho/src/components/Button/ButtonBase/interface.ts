@@ -13,4 +13,5 @@ export type Props = {
 
 export type StyledProps = {
   variant: ColorsButtonOptions;
+  disabled?: boolean;
 };

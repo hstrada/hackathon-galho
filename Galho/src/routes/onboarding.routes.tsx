@@ -18,7 +18,14 @@ const AppRoutes = () => {
         })}
         component={Intro}
       />
-      <OnBoardingStack.Screen name="PersonalData" component={PersonalData} />
+      <OnBoardingStack.Screen
+        options={() => ({
+          headerTitle: 'Cadastro',
+          headerBackTitle: 'Voltar',
+        })}
+        name="PersonalData"
+        component={PersonalData}
+      />
     </OnBoardingStack.Navigator>
   );
 };

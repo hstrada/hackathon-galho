@@ -13,6 +13,7 @@ export const galhoTheme: DefaultTheme = {
     background: {
       primary: colors.background,
       secondary: colors.primary,
+      disabled: colors.grayX,
     },
     text: {
       primary: colors.primary,

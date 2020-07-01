@@ -4,6 +4,7 @@ export default {
   tertiary: '#DDA95D',
   quaternary: '#544A38',
   background: '#FDFAF5',
+  grayX: '#bfbfbf',
   gray: '#F6F6F6',
   white: '#FFFFFF',
   black: '#000000',
@@ -14,6 +15,7 @@ export interface ColorPropsBackground {
   /** Primary is: gray... */
   primary: string;
   secondary: string;
+  disabled: string;
 }
 
 export interface ColorsPropsText {
