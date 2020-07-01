@@ -1,8 +1,8 @@
 import React from 'react';
 
-import SplashScreen from '../screens/SplashScreen';
+// import SplashScreen from '../screens/SplashScreen';
 
-import AppRoutes from './app.routes';
+// import AppRoutes from './app.routes';
 
 import OnBoarding from './onboarding.routes';
 
