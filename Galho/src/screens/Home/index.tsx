@@ -1,24 +1,21 @@
 import React from 'react';
 
-import { Grid, Typography } from '../../components';
+import { Grid, Typography, ButtonOutline, ButtonBase } from '../../components';
 
 const Home = () => {
-  const options = {
-    bloqueado: { texto: 'block' },
-    desbloqueado: { texto: 'desbloqueado' },
-    esperando: { texto: 'esperando' },
-    recusado: { texto: 'recusado' },
-  };
-
-  const getOptions = () => {
-    return options.recusado;
-  };
-
-  const { texto } = getOptions();
-
   return (
-    <Grid flex={1} backgroundColor="primary">
-      <Typography text={texto} />
+    <Grid
+      flex={1}
+      paddingBottom="medium"
+      paddingTop="medium"
+      paddingRight="medium"
+      paddingLeft="medium"
+      backgroundColor="primary">
+      <Typography text="Teste" />
+      <Grid marginBottom="medium">
+        <ButtonOutline onPress={() => console.log('teste')} text="Login" />
+      </Grid>
+      <ButtonBase onPress={() => console.log('teste')} text="Login" />
     </Grid>
   );
 };

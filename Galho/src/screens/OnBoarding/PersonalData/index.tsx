@@ -2,12 +2,12 @@ import React from 'react';
 
 import { View, Text } from 'react-native';
 
-const SplashScreen = () => {
+const PersonalData = () => {
   return (
     <View>
-      <Text>SplashScreen</Text>
+      <Text>PersonalData</Text>
     </View>
   );
 };
 
-export default SplashScreen;
+export default PersonalData;
