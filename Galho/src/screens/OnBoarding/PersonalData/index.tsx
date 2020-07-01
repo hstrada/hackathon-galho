@@ -9,7 +9,7 @@ const PersonalData = () => {
 
   const validateForm = (input: string) => {
     setFullName(input);
-    if (fullName.length > 3) {
+    if (fullName.length >= 3) {
       setIsValid(true);
     } else {
       setIsValid(false);
