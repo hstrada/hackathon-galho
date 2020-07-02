@@ -23,7 +23,7 @@ export default {
     height: 70,
   },
   input: {
-    height: 70,
+    height: 60,
   },
 };
 
