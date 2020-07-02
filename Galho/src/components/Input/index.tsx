@@ -8,12 +8,12 @@ import { InputProps } from './interface';
 
 import { Container, ContainerText } from './styles';
 
-const InputWithIcon: FunctionComponent<InputProps> = ({
+const Input: FunctionComponent<InputProps> = ({
   value,
   testID,
   maxLength,
   placeholder,
-  placeholderTextColor = colors.tertiary,
+  placeholderTextColor = colors.quaternary,
   onChangeText,
   ...rest
 }) => {
@@ -41,4 +41,4 @@ const InputWithIcon: FunctionComponent<InputProps> = ({
   );
 };
 
-export default InputWithIcon;
+export default Input;

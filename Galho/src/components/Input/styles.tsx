@@ -5,7 +5,7 @@ import colors from '../../theme/colors';
 import { StyledInputProps } from './interface';
 
 export const getBorderColor = ({ isFocused }: StyledInputProps) => {
-  if (!isFocused) {
+  if (isFocused) {
     return colors.tertiary;
   } else {
     return colors.quaternary;
@@ -27,7 +27,10 @@ export const Container = styled.View<StyledInputProps>`
 `;
 
 export const ContainerText = styled.TextInput`
-  color: ${({ theme }) => theme.colors.text.fourth};
+  color: ${({ theme }) => theme.colors.text.tertiary};
+  height: ${({ theme }) => theme.units.input.height}px;
   font-size: ${(props) => props.theme.fonts.size.xxp}px;
   font-family: ${({ theme }) => theme.fonts.latoRegular};
+  text-align: center;
+  width: 100%;
 `;

@@ -4,17 +4,7 @@ import { Grid, ButtonBase, Input, Typography } from '../../../components';
 
 const PersonalData = () => {
   const [fullName, setFullName] = useState<string>('');
-
-  const [isValid, setIsValid] = useState<boolean>(false);
-
-  const validateForm = (input: string) => {
-    setFullName(input);
-    if (fullName.length >= 3) {
-      setIsValid(true);
-    } else {
-      setIsValid(false);
-    }
-  };
+  const [dateOfBirth, setDateOfBirth] = useState<string>('');
 
   return (
     <Grid
@@ -25,20 +15,31 @@ const PersonalData = () => {
       paddingLeft="xlarge"
       backgroundColor="primary">
       <Grid justifyContent="center" flex={5}>
-        <Grid marginBottom="mediumX">
-          <Typography align="center" text="Qual é o seu nome?" color="fourth" />
-        </Grid>
+        <Typography align="center" text="Qual é o seu nome?" color="fourth" />
+
         <Grid>
           <Input
             value={fullName}
-            onChangeText={(input) => validateForm(input)}
+            onChangeText={(input) => setFullName(input)}
             placeholder="digite seu nome"
+          />
+        </Grid>
+        <Grid marginBottom="small" marginTop="extraLarge">
+          <Typography
+            align="center"
+            text="Qual dia você nasceu?"
+            color="fourth"
+          />
+          <Input
+            value={dateOfBirth}
+            onChangeText={(input) => setDateOfBirth(input)}
+            placeholder="digite sua data de nascimento"
           />
         </Grid>
       </Grid>
       <Grid justifyContent="flex-end" flex={1}>
         <ButtonBase
-          disabled={!isValid}
+          disabled={!(fullName.length >= 3 && dateOfBirth.length >= 8)}
           onPress={() => console.log('Próximo')}
           text="Próximo"
         />
