@@ -4,10 +4,18 @@ import React from 'react';
 
 // import AppRoutes from './app.routes';
 
+import { Provider } from 'react-redux';
+
+import { store } from '../store';
+
 import OnBoarding from './onboarding.routes';
 
 const Routes: React.FC = () => {
-  return <OnBoarding />;
+  return (
+    <Provider store={store}>
+      <OnBoarding />
+    </Provider>
+  );
 
   // return true ? <AppRoutes /> : <OnBoarding />;
 };
