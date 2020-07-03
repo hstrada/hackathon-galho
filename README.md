@@ -33,7 +33,8 @@
 ---
 ## :rocket: Project Summary
 
-This Project was made to [MegaHack 3.0](https://www.megahack.com.br/),to solve the challenge proposed by Árvore Educação company. 
+This Project was made to [MegaHack 3.0](https://www.megahack.com.br/), to solve the challenge proposed by Árvore Educação company. 
+
 ---
 ## 👨‍💻️ Technologies Used
 
@@ -140,5 +141,5 @@ To clone the project, use the commands bellow:
 ---
 
 <h4 align="center">
-  Made with 💚 by <a href="https://www.linkedin.com/in/helenastrada/">Helena Strada</a>, <a href="https://www.linkedin.com/in/jcalebe/">Josias Calebe</a>, <a href="https://www.linkedin.com/in/mathpsantos/">Matheus Santos</a>! We hope you love it!
+  Made with 💚 by <a href="https://www.linkedin.com/in/helenastrada/">Helena Strada</a>, <a href="https://www.linkedin.com/in/jcalebe/">Josias Calebe</a> and <a href="https://www.linkedin.com/in/mathpsantos/">Matheus Santos</a>! We hope you love it!
 </h4>
