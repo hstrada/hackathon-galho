@@ -1,7 +1,11 @@
 import * as types from './action-types';
 
 const initialState = {
-  data: {},
+  data: {
+    fullName: '',
+    dateOfBirth: '',
+  },
+  loading: false,
 };
 
 export default (state = initialState, action: any) => {

@@ -1,10 +1,25 @@
 import React, { useState } from 'react';
 
+import { useDispatch } from 'react-redux';
+
 import { Grid, ButtonBase, Input, Typography } from '../../../components';
 
+import { createPersonalData } from '../../../store/ducks/user/actions';
+
 const PersonalData = () => {
+  const dispatch = useDispatch();
+
   const [fullName, setFullName] = useState<string>('');
   const [dateOfBirth, setDateOfBirth] = useState<string>('');
+
+  const handleData = () => {
+    dispatch(
+      createPersonalData({
+        fullName: fullName,
+        dateOfBirth: dateOfBirth,
+      }),
+    );
+  };
 
   return (
     <Grid
@@ -40,7 +55,7 @@ const PersonalData = () => {
       <Grid justifyContent="flex-end" flex={1}>
         <ButtonBase
           disabled={!(fullName.length >= 3 && dateOfBirth.length >= 8)}
-          onPress={() => console.log('Próximo')}
+          onPress={() => handleData()}
           text="Próximo"
         />
       </Grid>
