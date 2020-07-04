@@ -9,8 +9,6 @@ import { getPersonalData } from '../../store/ducks/user/selectors';
 const Home = ({ navigation }) => {
   const { fullName } = useSelector(getPersonalData);
 
-  // matheus.map((value) => value.charAt(0).toUpperCase() + value.slice(1)).join(' ');
-
   const formatName = (matheus: string) => {
     return matheus
       .split('_')

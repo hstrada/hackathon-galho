@@ -10,18 +10,22 @@ const initialState = {
 };
 
 export default (state = initialState, action: any) => {
+  console.log(action.payload);
   switch (action.type) {
-    case types.CREATE_LEAF:
+    case types.INCREASE_LEAF:
       return {
-        data: { ...state, leaf: action.payload },
+        ...state,
+        data: { ...state.data, leaf: action.payload },
       };
     case types.CREATE_BRANCH:
       return {
-        data: { ...state, branch: action.payload },
+        ...state,
+        branch: action.payload,
       };
     case types.CREATE_TREE:
       return {
-        data: { ...state, tree: action.payload },
+        ...state,
+        tree: action.payload,
       };
 
     default:
