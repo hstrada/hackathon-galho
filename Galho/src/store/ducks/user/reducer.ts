@@ -1,10 +1,7 @@
 import * as types from './action-types';
 
 const initialState = {
-  data: {
-    fullName: '',
-    dateOfBirth: '',
-  },
+  data: {},
   loading: false,
 };
 
