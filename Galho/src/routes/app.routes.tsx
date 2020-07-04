@@ -2,20 +2,21 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import React from 'react';
 
-import routes from '../constants/routes';
+import Book from '../screens/Book';
 
 import Home from '../screens/Home';
 
 import Profile from '../screens/Profile';
 
-const Stack = createStackNavigator();
+const AppStack = createStackNavigator();
 
 const AppRoutes = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name={routes.HOME} component={Home} />
-      <Stack.Screen name={routes.PROFILE} component={Profile} />
-    </Stack.Navigator>
+    <AppStack.Navigator>
+      <AppStack.Screen name="Home" component={Home} />
+      <AppStack.Screen name="Book" component={Book} />
+      <AppStack.Screen name="Profile" component={Profile} />
+    </AppStack.Navigator>
   );
 };
 

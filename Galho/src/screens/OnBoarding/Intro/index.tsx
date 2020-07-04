@@ -5,7 +5,6 @@ import { Image } from 'react-native';
 import { Grid, Typography, ButtonBase } from '../../../components';
 
 const Intro = ({ navigation }) => {
-  // onPress={() => navigation.navigate('PersonalData')}
   return (
     <Grid
       flex={1}

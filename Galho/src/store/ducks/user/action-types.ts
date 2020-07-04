@@ -1,0 +1,2 @@
+export const CREATE_PERSONAL_DATA = 'user/CREATE_PERSONAL_DATA';
+export const LOAD_PERSONAL_DATA = 'user/LOAD_PERSONAL_DATA';
