@@ -32,3 +32,14 @@ export const Container = styled.View`
   align-items: center;
   background-color: ${({ theme }) => theme.colors.text.tertiary};
 `;
+
+export const AchievementIcon = styled.Image``;
+
+export const ContainerIcon = styled.View`
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+`;
