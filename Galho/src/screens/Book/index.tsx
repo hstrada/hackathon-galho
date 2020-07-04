@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 
 import { Grid } from '../../components';
 
-import { createLeaf } from '../../store/ducks/achievements/actions';
+import { createLeaf } from '../../store/ducks/books/actions';
 
 const Book = ({ route }) => {
   const dispatch = useDispatch();

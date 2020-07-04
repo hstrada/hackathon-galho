@@ -6,6 +6,8 @@ import { Grid, Typography, Header } from '../../components';
 
 import { getPersonalData } from '../../store/ducks/user/selectors';
 
+import colors from '../../theme/colors';
+
 const Home = ({ navigation }) => {
   const { fullName } = useSelector(getPersonalData);
 
@@ -32,7 +34,10 @@ const Home = ({ navigation }) => {
           fontSize="xxm"
           color="fourth"
         />
-        <Grid marginTop="medium">
+        <Grid
+          marginTop="medium"
+          paddingBottom="medium"
+          style={{ borderBottomColor: colors.tertiary, borderBottomWidth: 1 }}>
           <Typography
             text="Sua meta diária"
             color="fourth"

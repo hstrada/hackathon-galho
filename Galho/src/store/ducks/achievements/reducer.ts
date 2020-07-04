@@ -7,25 +7,28 @@ const initialState = {
     branch: 0,
     tree: 0,
   },
+  config: {
+    leafGoal: 10,
+    branchGoal: 10,
+  },
 };
 
 export default (state = initialState, action: any) => {
-  console.log(action.payload);
   switch (action.type) {
     case types.INCREASE_LEAF:
       return {
         ...state,
-        data: { ...state.data, leaf: action.payload },
+        data: { ...state.data, leaf: state.data.leaf + action.payload },
       };
     case types.CREATE_BRANCH:
       return {
         ...state,
-        branch: action.payload,
+        data: { ...state.data, branch: state.data.branch + 1 },
       };
     case types.CREATE_TREE:
       return {
         ...state,
-        tree: action.payload,
+        data: { ...state.data, tree: state.data.tree + 1 },
       };
 
     default:

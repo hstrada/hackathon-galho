@@ -2,11 +2,14 @@ import { combineReducers } from 'redux';
 
 import achievements from './achievements/reducer';
 
+import books from './books/reducer';
+
 import user from './user/reducer';
 
 const appReducer = combineReducers({
-  user,
   achievements,
+  books,
+  user,
 });
 
 export default (state: any, action: any) => {
