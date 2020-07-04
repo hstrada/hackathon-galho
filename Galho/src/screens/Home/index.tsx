@@ -6,8 +6,17 @@ import { Grid, Typography, Header } from '../../components';
 
 import { getPersonalData } from '../../store/ducks/user/selectors';
 
-const Home = () => {
+const Home = ({ navigation }) => {
   const { fullName } = useSelector(getPersonalData);
+
+  // matheus.map((value) => value.charAt(0).toUpperCase() + value.slice(1)).join(' ');
+
+  const formatName = (matheus: string) => {
+    return matheus
+      .split('_')
+      .map((value: string) => value.charAt(0).toUpperCase() + value.slice(1))
+      .join(' ');
+  };
 
   return (
     <Grid flex={1}>
@@ -31,6 +40,19 @@ const Home = () => {
             color="fourth"
             fontFamily="latoRegular"
             fontSize="m"
+          />
+        </Grid>
+        <Grid marginTop="xlarge">
+          <Typography
+            onPress={() =>
+              navigation.navigate('Book', {
+                bookName: 'rise_of_countinuous_testing',
+              })
+            }
+            text={formatName('rise_of_countinuous_testing')}
+            fontFamily="latoBold"
+            fontSize="xxm"
+            color="fourth"
           />
         </Grid>
       </Grid>
