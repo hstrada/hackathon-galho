@@ -1,16 +1,16 @@
 import AsyncStorage from '@react-native-community/async-storage';
 
-import { createStore, applyMiddleware } from 'redux';
+import { createStore } from 'redux';
 
 import { persistStore, persistReducer } from 'redux-persist';
 
-import createSagaMiddleware from 'redux-saga';
+// import createSagaMiddleware from 'redux-saga';
 
 import Reactotron from '../config/reactotronConfig';
 
 import rootReducer from './ducks/rootReducer';
 
-import rootSaga from './sagas/rootSaga';
+// import rootSaga from './sagas/rootSaga';
 
 const persistConfig = {
   key: 'root',
@@ -18,9 +18,10 @@ const persistConfig = {
 };
 
 Reactotron.onCustomCommand({
-  command: 'Logout',
+  command: 'Erase',
   description: 'Clean Redux',
   handler: () => {
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
     AsyncStorage.clear().then(() => {});
   },
 });
