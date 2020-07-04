@@ -1,18 +1,18 @@
 import React from 'react';
 
-import { View, Text } from 'react-native';
+import { Image } from 'react-native';
 
-import { useSelector } from 'react-redux';
-
-import { getPersonalData } from '../../store/ducks/user/selectors';
+import { Grid } from '../../components';
 
 const SplashScreen = () => {
-  const { fullName } = useSelector(getPersonalData);
-
   return (
-    <View>
-      <Text>{fullName}</Text>
-    </View>
+    <Grid
+      flex={1}
+      backgroundColor="secondary"
+      justifyContent="center"
+      alignItems="center">
+      <Image source={require('../../assets/imgs/SplashIcon.png')} />
+    </Grid>
   );
 };
 

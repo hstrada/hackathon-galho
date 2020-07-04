@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { useSelector } from 'react-redux';
 
@@ -13,7 +13,13 @@ import OnBoarding from './onboarding.routes';
 const Routes = () => {
   const { fullName } = useSelector(getPersonalData);
 
-  if (false) {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  setTimeout(() => {
+    setIsLoading(false);
+  }, 3000);
+
+  if (isLoading) {
     return <SplashScreen />;
   }
 
