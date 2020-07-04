@@ -4,16 +4,20 @@ import { StyleSheet, Dimensions, Text } from 'react-native';
 
 import Pdf from 'react-native-pdf';
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { Grid } from '../../components';
 
 import { createLeaf } from '../../store/ducks/books/actions';
 
+import { getBooks } from '../../store/ducks/books/selectors';
+
 const Book = ({ route }) => {
   const dispatch = useDispatch();
 
   const { bookName } = route.params;
+
+  const { leafs } = useSelector(getBooks);
 
   const [bookUrl, setbookUrl] = useState<string>('');
 
@@ -24,6 +28,7 @@ const Book = ({ route }) => {
   return (
     <Grid flex={1}>
       <Pdf
+        page={leafs}
         source={require('../../books/rise_of_countinuous_testing.pdf')}
         onLoadComplete={(numberOfPages, filePath) => {
           console.log(`number of pages: ${numberOfPages}`);

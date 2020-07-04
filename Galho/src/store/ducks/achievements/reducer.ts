@@ -9,21 +9,21 @@ const initialState = {
   },
   config: {
     leafGoal: 10,
-    branchGoal: 10,
+    branchGoal: 20,
   },
 };
 
 export default (state = initialState, action: any) => {
   switch (action.type) {
-    case types.INCREASE_LEAF:
+    case types.CREATE_LEAF:
       return {
         ...state,
-        data: { ...state.data, leaf: state.data.leaf + action.payload },
+        data: { ...state.data, leaf: action.payload },
       };
     case types.CREATE_BRANCH:
       return {
         ...state,
-        data: { ...state.data, branch: state.data.branch + 1 },
+        data: { ...state.data, branch: action.payload },
       };
     case types.CREATE_TREE:
       return {
