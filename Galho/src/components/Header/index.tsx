@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StatusBar, Image } from 'react-native';
+import { StatusBar, Image, TouchableOpacity } from 'react-native';
 
 import { useSelector } from 'react-redux';
 
@@ -14,7 +14,7 @@ import Typography from '../Typography';
 
 import { Wrapper, Container, AchievementIcon, ContainerIcon } from './styles';
 
-const Header = () => {
+const Header = ({ navigation }) => {
   const { branch, leaf, tree } = useSelector(getAchievements);
 
   return (
@@ -22,10 +22,13 @@ const Header = () => {
       <Container>
         <StatusBar backgroundColor={colors.primary} barStyle="dark-content" />
 
-        <Image
-          source={require('../../assets/imgs/achievements/library.png')}
-          style={{ width: 35, height: 35 }}
-        />
+        <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+          <Image
+            source={require('../../assets/imgs/achievements/library.png')}
+            // eslint-disable-next-line react-native/no-inline-styles
+            style={{ width: 35, height: 35 }}
+          />
+        </TouchableOpacity>
         <Grid flexDirection="row">
           <ContainerIcon>
             <AchievementIcon

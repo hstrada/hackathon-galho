@@ -21,7 +21,7 @@ const Home = ({ navigation }) => {
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
       <Grid flex={1}>
-        <Header />
+        <Header navigation={navigation} />
         <Grid
           flex={1}
           paddingBottom="xlarge"
