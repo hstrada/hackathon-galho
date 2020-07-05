@@ -9,19 +9,12 @@ import { getBooks } from '../../store/ducks/books/selectors';
 
 import { getPersonalData } from '../../store/ducks/user/selectors';
 
-import format from '../../utils/index';
+import { format } from '../../utils/index';
 
 const Home = ({ navigation }) => {
   const { fullName } = useSelector(getPersonalData);
 
   const { leafs, totalPages } = useSelector(getBooks);
-
-  const formatName = (matheus: string) => {
-    return matheus
-      .split('_')
-      .map((value: string) => value.charAt(0).toUpperCase() + value.slice(1))
-      .join(' ');
-  };
 
   return (
     <Grid flex={1}>
@@ -60,9 +53,9 @@ const Home = ({ navigation }) => {
         </Grid>
         <Grid marginTop="xxxlarge">
           <Book.Item
-            progress={format.format.percentage(leafs, totalPages)}
+            progress={format.percentage(leafs, totalPages)}
             imgSource={require('../../books/rise.png')}
-            label={formatName('rise_of_countinuous_testing')}
+            label={format.bookName('rise_of_countinuous_testing')}
             navigation={navigation}
           />
         </Grid>
