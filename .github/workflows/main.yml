@@ -1,0 +1,42 @@
+name: build-android-apk
+on:
+  push:
+    branches:
+      - master
+jobs:
+  install-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.TOKEN }}
+      - name: Install npm dependencies
+        run: |
+          cd Galho && npm install
+  build-android:
+    needs: install-and-test
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.TOKEN }}
+      - name: Install npm dependencies
+        run: |
+          cd CodeCafe && npm install
+      - name: Build Android Release
+        run: |
+          cd Galho/android && chmod +x ./gradlew && ./gradlew clean && ./gradlew assembleRelease
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: app-release.apk
+          path: Galho/android/app/build/outputs/apk/release/
+      - name: Create release and upload apk
+        uses: underwindfall/create-release-with-debugapk@v2.0.0
+        env:
+            GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        with:
+          tag_name: v2.0.0
+          asset_path: Galho/android/app/build/outputs/apk/release/app-release.apk
+          asset_name: Galho.apk
+          asset_content_type: application/zip
