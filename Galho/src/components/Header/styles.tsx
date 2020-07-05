@@ -21,7 +21,7 @@ export const Wrapper = styled.View`
 `;
 
 export const Container = styled.View`
-  height: 80px;
+  height: 100px;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;

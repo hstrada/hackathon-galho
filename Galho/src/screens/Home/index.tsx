@@ -2,14 +2,20 @@ import React from 'react';
 
 import { useSelector } from 'react-redux';
 
-import { Grid, Typography, Header } from '../../components';
+import { Grid, Typography, Header, Book } from '../../components';
+
+import { getBooks } from '../../store/ducks/books/selectors';
 
 import { getPersonalData } from '../../store/ducks/user/selectors';
 
 import colors from '../../theme/colors';
 
+import format from '../../utils/index';
+
 const Home = ({ navigation }) => {
   const { fullName } = useSelector(getPersonalData);
+
+  const { leafs, totalPages } = useSelector(getBooks);
 
   const formatName = (matheus: string) => {
     return matheus
@@ -27,6 +33,11 @@ const Home = ({ navigation }) => {
         paddingTop="xlarge"
         paddingRight="xlarge"
         paddingLeft="xlarge"
+        style={{
+          borderTopRightRadius: 20,
+          borderTopLeftRadius: 20,
+          marginTop: -14,
+        }}
         backgroundColor="primary">
         <Typography
           text={'Olá ' + fullName}
@@ -46,16 +57,11 @@ const Home = ({ navigation }) => {
           />
         </Grid>
         <Grid marginTop="xlarge">
-          <Typography
-            onPress={() =>
-              navigation.navigate('Book', {
-                bookName: 'rise_of_countinuous_testing',
-              })
-            }
-            text={formatName('rise_of_countinuous_testing')}
-            fontFamily="latoBold"
-            fontSize="xxm"
-            color="fourth"
+          <Book.Item
+            progress={format.format.percentage(leafs, totalPages)}
+            imgSource={require('../../books/rise.png')}
+            label={formatName('rise_of_countinuous_testing')}
+            navigation={navigation}
           />
         </Grid>
       </Grid>

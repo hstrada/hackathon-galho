@@ -24,7 +24,7 @@ const Intro = ({ navigation }) => {
       <Grid>
         <Typography
           align="center"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          text="Uma nova maneira de incentivar sua leitura diária."
           color="fourth"
           fontSize="xxp"
         />

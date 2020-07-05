@@ -1,4 +1,4 @@
-import { takeLatest, put, select, takeEvery, call } from 'redux-saga/effects';
+import { takeLatest, put, select, takeEvery, delay } from 'redux-saga/effects';
 
 import * as achievementsTypes from '../ducks/achievements/action-types';
 
@@ -18,11 +18,17 @@ function* runTest({ payload }): any {
 
     if (payload === totalPages) {
       yield put({ type: booksTypes.COMPLETE_BOOK });
-      yield put({ type: achievementsTypes.CREATE_TREE });
     }
   } catch (error) {
     console.log(error);
   }
+}
+
+function* createTree() {
+  try {
+    yield delay(1000);
+    yield put({ type: achievementsTypes.CREATE_TREE });
+  } catch (error) {}
 }
 
 function* checkForBranchsAndLeafs() {
@@ -49,6 +55,7 @@ function* checkForBranchsAndLeafs() {
 
 const saga = function* (): Generator {
   yield takeLatest(booksTypes.CREATE_BOOK_LEAF, runTest);
+  yield takeLatest(booksTypes.COMPLETE_BOOK, createTree);
   yield takeEvery(booksTypes.INCREASE_BOOK_LEAF, checkForBranchsAndLeafs);
 };
 

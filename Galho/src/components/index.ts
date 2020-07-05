@@ -1,3 +1,5 @@
+export { default as Book } from './Book';
+
 export { default as ButtonBase } from './Button/ButtonBase';
 
 export { default as ButtonOutline } from './Button/ButtonOutline';
