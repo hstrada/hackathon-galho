@@ -35,8 +35,7 @@
 
 This Project was made to [MegaHack 3.0](https://www.megahack.com.br/), to solve the challenge proposed by Árvore Educação company.
 
-Esse aplicativo fora construído para incentivar a leitura através da gamificação, com metas diárias, conquistando a cada passo, galhos e a cada livro finalizado, ganha-se uma árvore.
-Todo o funcionamento do app será offline e livros serão disponibilizados gratuitamente.
+"O Galho é um aplicativo E-Reader que transforma a jornada literária do usuário em um grande jogo através de aspectos de gamificação, como níveis, conquistas, árvores de progresso e outros. Além disso, ao concluir um árvore de progresso, o leitor desbloqueará conteúdos adicionais sobre o livro lido e seu conteúdo, para que dessa forma o leitor possa voltar a dar valor a leitura. O Galho chegou para trazer aspectos que vêm crescendo no mercado de softwares para uma área que carece dos mesmos, possuindo uma grande escalabilidade em suas funções e em sua habilidade de tornar a leitura algo muito mais agradável, valioso e recompensador para os desmotivados jovens do Brasil."
 
 ---
 ## 👨‍💻️ Technologies Used
