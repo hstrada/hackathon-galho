@@ -37,6 +37,8 @@
 
 > This Project was made to [MegaHack 3.0](https://www.megahack.com.br/), to solve the challenge proposed by Árvore Educação company.
 
+> Release: https://github.com/hstrada/hackathon-galho/releases
+
 ---
 ## 👨‍💻️ Technologies Used
 
