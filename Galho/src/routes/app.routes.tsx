@@ -13,7 +13,13 @@ const AppStack = createStackNavigator();
 const AppRoutes = () => {
   return (
     <AppStack.Navigator>
-      <AppStack.Screen name="Home" component={Home} />
+      <AppStack.Screen
+        name="Home"
+        component={Home}
+        options={() => ({
+          headerShown: false,
+        })}
+      />
       <AppStack.Screen name="Book" component={Book} />
       <AppStack.Screen name="Profile" component={Profile} />
     </AppStack.Navigator>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StatusBar } from 'react-native';
+import { StatusBar, Image } from 'react-native';
 
 import { useSelector } from 'react-redux';
 
@@ -22,7 +22,10 @@ const Header = () => {
       <Container>
         <StatusBar backgroundColor={colors.primary} barStyle="dark-content" />
 
-        <Typography text="Left" />
+        <Image
+          source={require('../../assets/imgs/achievements/library.png')}
+          style={{ width: 35, height: 35 }}
+        />
         <Grid flexDirection="row">
           <ContainerIcon>
             <AchievementIcon

@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 
 import { useSelector } from 'react-redux';
@@ -7,8 +8,6 @@ import { Grid, Typography, Header, Book } from '../../components';
 import { getBooks } from '../../store/ducks/books/selectors';
 
 import { getPersonalData } from '../../store/ducks/user/selectors';
-
-import colors from '../../theme/colors';
 
 import format from '../../utils/index';
 
@@ -48,15 +47,18 @@ const Home = ({ navigation }) => {
         <Grid
           marginTop="medium"
           paddingBottom="medium"
-          style={{ borderBottomColor: colors.tertiary, borderBottomWidth: 1 }}>
+          style={{
+            borderBottomColor: 'rgba(221, 169, 93, 0.4)',
+            borderBottomWidth: 1,
+          }}>
           <Typography
-            text="Sua meta diária"
+            text="Continuar lendo"
             color="fourth"
             fontFamily="latoRegular"
             fontSize="m"
           />
         </Grid>
-        <Grid marginTop="xlarge">
+        <Grid marginTop="xxxlarge">
           <Book.Item
             progress={format.format.percentage(leafs, totalPages)}
             imgSource={require('../../books/rise.png')}

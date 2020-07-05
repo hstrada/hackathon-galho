@@ -1,4 +1,5 @@
 export default {
+  // future improvements: change to spacing2px, spacing4px
   spacing: {
     none: 0,
     xxs: 2,

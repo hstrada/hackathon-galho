@@ -11,7 +11,7 @@ const getHeaderSpacingStyle = (platform: PlatformOSType) => {
     };
   } else {
     return {
-      paddingTop: 3,
+      paddingTop: 0,
     };
   }
 };

@@ -4,6 +4,8 @@ import Grid from '../../Grid';
 
 import Typography from '../../Typography';
 
+import { Props } from './interface';
+
 import {
   Container,
   BookImage,
@@ -11,7 +13,7 @@ import {
   Percentage,
 } from './styles';
 
-const Item = ({ label, navigation, imgSource, progress = 0 }) => {
+const Item = ({ label, navigation, imgSource, progress = 0 }: Props) => {
   return (
     <Container>
       <BookImage source={imgSource} />
