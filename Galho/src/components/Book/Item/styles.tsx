@@ -19,6 +19,7 @@ export const Container = styled.View.attrs({
   background-color: ${({ theme }) => theme.colors.background.primary};
   border-radius: ${({ theme }) => theme.units.borderRadius.small};
   padding: 20px;
+  margin-bottom: ${({ theme }) => theme.units.spacing.xxlarge}px;
   display: flex;
   flex-direction: row;
 `;
