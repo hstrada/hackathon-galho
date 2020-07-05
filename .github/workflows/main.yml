@@ -22,7 +22,7 @@ jobs:
           token: ${{ secrets.TOKEN }}
       - name: Install npm dependencies
         run: |
-          cd CodeCafe && npm install
+          cd Galho && npm install
       - name: Build Android Release
         run: |
           cd Galho/android && chmod +x ./gradlew && ./gradlew clean && ./gradlew assembleRelease
