@@ -9,11 +9,7 @@ import { getAchievements } from '../../store/ducks/achievements/selectors';
 
 import { getBooks } from '../../store/ducks/books/selectors';
 
-import { getPersonalData } from '../../store/ducks/user/selectors';
-
 const Profile = () => {
-  const { fullName } = useSelector(getPersonalData);
-
   const { leafs } = useSelector(getBooks);
 
   const { tree, branch } = useSelector(getAchievements);
@@ -26,7 +22,7 @@ const Profile = () => {
         paddingBottom="xxxlarge"
         justifyContent="center"
         backgroundColor="secondary">
-        <Typography text={fullName} color="white" />
+        <Typography text="Conquistas" color="white" />
       </Grid>
       <Grid
         paddingBottom="xlarge"

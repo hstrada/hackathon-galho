@@ -17,7 +17,7 @@ export const Container = styled.View.attrs({
   width: 100%;
   height: 150px;
   background-color: ${({ theme }) => theme.colors.background.primary};
-  border-radius: ${({ theme }) => theme.units.borderRadius.small};
+  border-radius: ${({ theme }) => theme.units.borderRadius.small}px;
   padding: 20px;
   margin-bottom: ${({ theme }) => theme.units.spacing.xxlarge}px;
   display: flex;
@@ -33,7 +33,7 @@ export const BookImage = styled.Image`
 export const ContainerPercentage = styled.View`
   width: 100%;
   height: 10px;
-  border-radius: ${({ theme }) => theme.units.borderRadius.small};
+  border-radius: ${({ theme }) => theme.units.borderRadius.small}px;
   background-color: ${({ theme }) => theme.colors.background.disabled};
 `;
 

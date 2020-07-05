@@ -18,6 +18,7 @@ const getHeaderSpacingStyle = (platform: PlatformOSType) => {
 
 export const Wrapper = styled.View`
   ${getHeaderSpacingStyle(USER_PLATFORM)}
+  background-color: ${({ theme }) => theme.colors.text.tertiary};
 `;
 
 export const Container = styled.View`
